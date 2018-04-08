@@ -6,14 +6,12 @@ sudo git clone "https://github.com/collabassess/CPSXblock.git"
 sudo -u edxapp /edx/bin/pip.edxapp install CPSXblock/ --no-deps
 cd CPSXblock
 stty -echo
-printf "Mysql root username:" 
+printf "Mysql root username:\n" 
 read -s root
-printf "\n"
 printf "password"
 read -s password
 printf "\n"
 
-mysql -u $root -p -h localhost < Database\ file/collab_assess.sql
-$password
+mysql -u $root -p $password -h localhost < Database\ file/collab_assess.sql
 
 sudo /edx/bin/supervisorctl restart edxapp:*
