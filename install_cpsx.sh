@@ -8,9 +8,9 @@ cd CPSXblock
 stty -echo
 printf "Mysql root username:\n" 
 read -s root
-printf "password"
+printf "password\n"
 read -s password
-printf "\n"
+stty echo
 
 mysql -u $root -p $password -h localhost < Database\ file/collab_assess.sql
 
