@@ -2,7 +2,7 @@
 
 #installing shareable-block
 cd /edx/app/edxapp
-sudo git clone git+https://github.com/collabassess/CPSXblock.git
+sudo git clone "https://github.com/collabassess/CPSXblock.git"
 sudo -u edxapp /edx/bin/pip.edxapp install CPSXblock/ --no-deps
 cd CPSXblock
 stty -echo
