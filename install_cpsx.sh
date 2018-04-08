@@ -3,7 +3,7 @@
 #installing shareable-block
 cd /edx/app/edxapp
 sudo git clone "https://github.com/collabassess/CPSXblock.git"
-sudo -u edxapp /edx/bin/pip.edxapp install CPSXblock/ --no-deps
+sudo -u edxapp /edx/bin/pip.edxapp install CPSXblock/ --upgrade --no-deps
 cd CPSXblock
 stty -echo
 printf "Mysql root username:\n" 
