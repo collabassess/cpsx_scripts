@@ -25,3 +25,7 @@ mysql -u root -pedx --delimiter="//" -Bse "CREATE
 
 cd
 
+sudo git clone "https://github.com/collabassess/cpsx-api.git"
+cd cpsx-api
+npm install pm2@latest -g
+pm2 start app.js
