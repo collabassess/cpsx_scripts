@@ -27,6 +27,6 @@ cd
 
 sudo git clone "https://github.com/collabassess/cpsx-api.git"
 cd cpsx-api
-npm install
-npm install pm2@latest -g
-pm2 start app.js
+sudo npm install
+sudo npm install pm2@latest -g
+pm2 start bin/www
