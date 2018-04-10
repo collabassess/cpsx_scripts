@@ -14,9 +14,9 @@ mysql -u $root -p -h localhost < Database\ file/collab_assess.sql
 
 sudo /edx/bin/supervisorctl restart edxapp:*
 
-mysql -u root -pedx -Bse "insert into collab_assess.user_info select id, ( case when round(rand()) = 1 Then 'male' else 'female' end) from edxapp.auth_user;"
+mysql -u $root -p -Bse "insert into collab_assess.user_info select id, ( case when round(rand()) = 1 Then 'male' else 'female' end) from edxapp.auth_user;"
 
-mysql -u root -pedx --delimiter="//" -Bse "CREATE
+mysql -u $root -p --delimiter="//" -Bse "CREATE
     TRIGGER edxapp.new_user_add_gender AFTER INSERT
     ON auth_user
     FOR EACH ROW 
