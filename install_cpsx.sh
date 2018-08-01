@@ -10,7 +10,7 @@ printf "Mysql root username:\n"
 read -s root
 stty echo
 
-mysql -u $root -p -h localhost < Database\ file/collab_assess.sql
+mysql -u $root -p -h localhost < Database\ file/database_collab_assess.sql
 
 sudo /edx/bin/supervisorctl restart edxapp:*
 
